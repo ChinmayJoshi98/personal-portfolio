@@ -46,6 +46,14 @@ export const Banner = () => {
     }
   }
 
+  const handleResumeClick = () => {
+    window.open(
+      "https://drive.google.com/file/d/1MNpmAFaTyplWQCxqXLBl9gm8F0SmSkGc/view?usp=drive_link", 
+      "_blank", 
+      "noopener,noreferrer"
+    );
+  }
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -53,33 +61,35 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Innovative. Passionate. Driven.</span>
-                <h1>
-                  Hi, I'm Chinmay Joshi, a{" "}
-                  <span className="txt-rotate" dataPeriod="300" data-rotate='[ "Full Stack Developer", "Certified MuleSoft Developer" ]'>
-                    <span className="wrap">{text}</span>
-                  </span>
-                </h1>
-                <p>
-                  Always striving to be my best, I develop high-impact full-stack solutions and deliver cutting-edge MuleSoft integrations that fuel digital transformation.
-                </p>
-                <button onClick={() => console.log('Let’s Connect clicked')}>
-                  Let’s Connect <ArrowRightCircle size={25} />
-                </button>
-              </div>}
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                  <span className="tagline">Innovative. Passionate. Driven.</span>
+                  <h1>
+                    Hi, I'm Chinmay Joshi, a{" "}
+                    <span className="txt-rotate" dataPeriod="300" data-rotate='[ "Full Stack Developer", "Certified MuleSoft Developer" ]'>
+                      <span className="wrap">{text}</span>
+                    </span>
+                  </h1>
+                  <p>
+                    Always striving to be my best, I develop high-impact full-stack solutions and deliver cutting-edge MuleSoft integrations that fuel digital transformation.
+                  </p>
+                  <button onClick={handleResumeClick}>
+                    View My Resume <ArrowRightCircle size={25} />
+                  </button>
+                </div>
+              }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={myImage} alt="Header Img"/>
-                </div>}
+                  <img src={myImage} alt="Header Img" />
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
+  );
 }
