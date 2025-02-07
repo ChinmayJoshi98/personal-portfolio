@@ -62,7 +62,7 @@ export const Banner = () => {
                   </span>
                 </h1>
                 <p>
-                  I specialize in building scalable web applications and robust APIs that empower businesses to excel in a digital world.
+                  Always striving to be my best, I develop high-impact full-stack solutions and deliver cutting-edge MuleSoft integrations that fuel digital transformation.
                 </p>
                 <button onClick={() => console.log('Let’s Connect clicked')}>
                   Let’s Connect <ArrowRightCircle size={25} />
